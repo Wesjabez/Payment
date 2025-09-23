@@ -38,6 +38,17 @@ class User:
             self.__age = age_value
         else:
             raise ValueError (" invalid age")
+        
+    @property
+    def gender(self):
+        return self.__gender
+    
+    @gender.setter
+    def gender(self, gender_value):
+        if gender_value in ["male", "female"]:
+            self.__gender = gender_value
+        else:
+            raise ValueError ("invalid gender")
 
     #now for some age validation
 p1 = User("Bill", 21, "male", 112211, "jpg")
@@ -46,3 +57,7 @@ p1.name = 'constantine'
 p1.name
 p1.age =40
 p1.name
+p1.gender = "female"
+p1.name
+p1.gender = 'male'
+p1.name 
