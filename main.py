@@ -49,6 +49,18 @@ class User:
             self.__gender = gender_value
         else:
             raise ValueError ("invalid gender")
+        
+    
+    @property
+    def nationalID(self):
+        return self.__national_ID
+    
+    @nationalID.setter
+    def nationalID(self, id_value):
+        if isinstance(id_value, int) and not isinstance(id_value, bool):
+            self.__national_ID = id_value
+        else:
+            raise ValueError("invalid ID")
 
     #now for some age validation
 p1 = User("Bill", 21, "male", 112211, "jpg")
@@ -60,4 +72,5 @@ p1.name
 p1.gender = "female"
 p1.name
 p1.gender = 'male'
-p1.name 
+p1.nationalID = 22222221
+p1.name
