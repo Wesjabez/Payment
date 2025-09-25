@@ -62,7 +62,7 @@ class User:
         else:
             raise ValueError("invalid ID")
 
-    #now for some age validation
+    #now for some photo  validation
 p1 = User("Bill", 21, "male", 112211, "jpg")
 
 p1.name = 'constantine'
